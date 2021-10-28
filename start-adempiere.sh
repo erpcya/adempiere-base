@@ -26,7 +26,7 @@ then
     sed -i "s|ADEMPIERE_WEB_PORT=8888|ADEMPIERE_WEB_PORT=$ADEMPIERE_WEB_PORT|g" AdempiereEnv.properties
     sed -i "s|ADEMPIERE_SSL_PORT=4444|ADEMPIERE_SSL_PORT=$ADEMPIERE_SSL_PORT|g" AdempiereEnv.properties
     sed -i "s|ADEMPIERE_APPS_TYPE=tomcat|ADEMPIERE_APPS_TYPE=$ADEMPIERE_SERVICE_TYPE|g" AdempiereEnv.properties
-    sed -i "s|-Xms64M -Xmx512M|$ADEMPIERE_JAVA_OPTIONS|g" AdempiereEnv.properties
+    sed -i "s|-Xms64M -Xmx1512M|$ADEMPIERE_JAVA_OPTIONS|g" AdempiereEnv.properties
 	sh RUN_silentsetup.sh
 	
 	echo "ISSETUP=Y" >> /etc/profile
